@@ -35,7 +35,6 @@ export default function Home() {
             window.location.href = "/";
         }
     }
-    showNotes()
 
     return (
         <div className="note-wrapper">

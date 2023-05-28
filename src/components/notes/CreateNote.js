@@ -13,7 +13,7 @@ export default function CreateNote() {
 
     const onChangeInput = e => {
         const {name, value} = e.target;
-        setNote({...note, [name]:value})
+        setNote({...note, [name]:value});
     }
 
 

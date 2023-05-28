@@ -4,6 +4,7 @@ import './switch.css';
 
 
 export default function Login({setIsLogin}) {
+    const API_URL="https://language-learner-backend.onrender.com";
     const [user, setUser] = useState({name: '',email: '',password: '' })
     const [err, setErr] = useState('')
 
@@ -16,7 +17,7 @@ export default function Login({setIsLogin}) {
     const registerSubmit = async e =>{
         e.preventDefault()
         try {
-            const res = await axios.post('/users/register',{
+            const res = await axios.post(API_URL+'/users/register',{
                 username: user.name,
                 email: user.email,
                 password: user.password
@@ -31,7 +32,7 @@ export default function Login({setIsLogin}) {
     const loginSubmit = async e =>{
         e.preventDefault()
         try {
-            const res = await axios.post('/users/login',{
+            const res = await axios.post(API_URL+'/users/login',{
                 email: user.email,
                 password: user.password
             })

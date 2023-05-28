@@ -3,6 +3,7 @@ import axios from 'axios'
 import {useHistory} from 'react-router-dom'
 
 export default function EditNote({match}) {
+    const API_URL="https://language-learner-backend.onrender.com";
     const [note, setNote] = useState({
         title: '',
         content: '',
@@ -15,7 +16,7 @@ export default function EditNote({match}) {
         const getNote = async () =>{
             const token = localStorage.getItem('tokenStore')
             if(match.params.id){
-                const res = await axios.get(`/api/notes/${match.params.id}`, {
+                const res = await axios.get(API_URL+`/api/notes/${match.params.id}`, {
                     headers: {Authorization: token}
                 })
                 setNote({
@@ -45,7 +46,7 @@ export default function EditNote({match}) {
                     title, content, date
                 }
 
-                await axios.put(`/api/notes/${id}`, newNote, {
+                await axios.put(API_URL+`/api/notes/${id}`, newNote, {
                     headers: {Authorization: token}
                 })
                 

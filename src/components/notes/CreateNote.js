@@ -3,6 +3,7 @@ import axios from 'axios'
 import {useHistory} from 'react-router-dom'
 
 export default function CreateNote() {
+    const API_URL="https://language-learner-backend.onrender.com";
     const [note, setNote] = useState({
         title: '',
         content: '',
@@ -26,7 +27,7 @@ export default function CreateNote() {
                     title, content, date
                 }
 
-                await axios.post('/api/notes', newNote, {
+                await axios.post(API_URL+'/api/notes', newNote, {
                     headers: {Authorization: token}
                 })
                 

@@ -4,6 +4,7 @@ import {format} from 'timeago.js'
 import axios from 'axios'
 
 export default function Home() {
+    const API_URL="https://language-learner-backend.onrender.com";
     const [notes, setNotes] = useState([])
     const [token, setToken] = useState('')
 
@@ -25,7 +26,7 @@ export default function Home() {
     const deleteNote = async (id) =>{
         try {
             if(token){
-                await axios.delete(`api/notes/${id}`, {
+                await axios.delete(API_URL+`api/notes/${id}`, {
                     headers: {Authorization: token}
                 })
                 getNotes(token)

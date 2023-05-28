@@ -41,7 +41,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 34px;
@@ -63,14 +63,15 @@ h1 {
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 50%;
+  border:black 1px solid;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: gray;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px gray;
 }
 
 input:checked + .slider:before {
@@ -79,6 +80,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
   background-color: #000;
   background-image: url(../../../public/lightmodeswitch.png);
+  
 }
 
 .row {
@@ -132,16 +134,20 @@ button {
 
 #translate-btn{
   /* align: center; */
-  background-color: white;
-  border-radius: 10px;
+  background-color: black;
+    border-radius: 10px;
+    color: white;
+    border: 5px solid white;
+    padding: 3px;
+    margin:20px
 }
 
 button:hover {
-  color: #0069c0;
+  color: gray;
 }
 
 button:active {
-  color: #0d47a1;
+  color: black;
 }
 
 .fas,
@@ -157,19 +163,19 @@ button:active {
 .fa-volume-up:before {
   content: "\f028";
   /* box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
-  background-color: white;
+  background-color: black;
 }
 
 .fa-copy:before {
   content: "\f0c5";
   /* box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
-  background-color: white;
+  background-color: black;
 }
 
 .fa-exchange-alt:before {
   content: "\f362";
   /* box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
-  background-color: white;
+  background-color: black;
 }
 
 .exchange {

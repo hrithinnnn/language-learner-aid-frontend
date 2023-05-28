@@ -106,7 +106,7 @@ export default function Translator() {
 
   const fromRef = useRef(null);
   const toRef = useRef(null);
-  let isDarkMode=true;
+  let isDarkMode = true;
 
   useEffect(() => {
     const selectTags = document.querySelectorAll("select");
@@ -236,62 +236,62 @@ export default function Translator() {
         </label> */}
       </header>
       <main>
-        
-            <div className="row">
-              <div className="column">
-                <select
-                  name="translateFrom"
-                  value={translateFrom}
-                  onChange={handleSelectChange}>
 
-                </select>
-                <textarea
-                  ref={fromRef}
-                  value={fromText}
-                  onChange={handleInputChange}
-                  placeholder="Enter text to translate">
+        <div className="row">
+          <div className="column">
+            <select
+              name="translateFrom"
+              value={translateFrom}
+              onChange={handleSelectChange}>
 
-                </textarea>
-                <div className="buttons">
-                  {/* <button onClick={handleTranslate}>
+            </select>
+            <textarea
+              ref={fromRef}
+              value={fromText}
+              onChange={handleInputChange}
+              placeholder="Enter text to translate">
+
+            </textarea>
+            <div className="buttons">
+              {/* <button onClick={handleTranslate}>
                               {isLoading ? "Translating..." : "Translate"}
                             </button> */}
-                  <button className="fas fa-volume-up" id="from" onClick={() => handleTextToSpeech(fromText, translateFrom)}> </button>
-                  {/* <button className="fas fa-volume-up" id="to" onClick={() => handleTextToSpeech(toText, translateTo)}>Text To Speech</button> */}
-                  <button className="far fa-copy" id="from" onClick={handleCopyFrom}>
-                  {/* <i className="far fa-copy" id="from"></i> */}
-                  </button>
-                </div>
-              </div>
-              <div className="column">
-                <select
-                  name="translateTo"
-                  value={translateTo}
-                  onChange={handleSelectChange}
-                ></select>
-                <textarea
-                  ref={toRef}
-                  value={toText}
-                  readOnly
-                  placeholder="Translated text will appear here"
-                ></textarea>
-                <div className="buttons">
-                  {/* <button className="far fa-copy" id="to"></button> */}
-                  <button className="fas fa-volume-up" id="to" onClick={() => handleTextToSpeech(toText, translateTo)}></button>
-                  <button className="far fa-copy" id="to" onClick={handleCopyTo}>
-                  {/* <i className="far fa-copy" id="from"></i> */}
-                  </button>
-                </div>
-              </div>
+              <button className="fas fa-volume-up" style={{ color: '#ffffff' }} id="from" onClick={() => handleTextToSpeech(fromText, translateFrom)}> </button>
+              {/* <button className="fas fa-volume-up" id="to" onClick={() => handleTextToSpeech(toText, translateTo)}>Text To Speech</button> */}
+              <button className="far fa-copy" style={{ color: '#ffffff' }} id="from" onClick={handleCopyFrom}>
+                {/* <i className="far fa-copy" id="from"></i> */}
+              </button>
             </div>
-              <center><button id = 'translate-btn' onClick={handleTranslate}>
-                {isLoading ? "Translating..." : "Translate"}
-              </button></center>
-              <div className="exchange">
-                <button className="fas fa-exchange-alt" onClick={handleExchange}></button>
-              </div>
-        
+          </div>
+          <div className="column">
+            <select
+              name="translateTo"
+              value={translateTo}
+              onChange={handleSelectChange}
+            ></select>
+            <textarea
+              ref={toRef}
+              value={toText}
+              readOnly
+              placeholder="Translated text will appear here"
+            ></textarea>
+            <div className="buttons">
+              {/* <button className="far fa-copy" id="to"></button> */}
+              <button className="fas fa-volume-up" style={{ color: '#ffffff' }} id="to" onClick={() => handleTextToSpeech(toText, translateTo)}></button>
+              <button className="far fa-copy" style={{ color: '#ffffff' }} id="to" onClick={handleCopyTo}>
+                {/* <i className="far fa-copy" id="from"></i> */}
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="exchange">
+          <button className="fas fa-exchange-alt" style={{ color: '#ffffff' }} onClick={handleExchange}></button>
+        </div>
+        <center><button id='translate-btn' onClick={handleTranslate}>
+          {isLoading ? "Translating..." : "Translate"}
+        </button></center>
+
       </main>
-      </div>
+    </div>
   );
 }

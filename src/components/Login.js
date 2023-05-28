@@ -78,13 +78,13 @@ export default function Login({setIsLogin}) {
 
                     <button className="LoginBtn" type="submit"><span>Translate Away</span></button>
                     <p><center>don't have an account?
-                        <span onClick={() => setOnLogin(true)}> Register Now</span>
+                        <span id ="RegisterNow" onClick={() => setOnLogin(true)}> Register Now</span>
                     </center></p>
                     <h3>{err}</h3>
                 </form>
            </div>
            <div className="register create-note" style={style}>
-           <h2>Register</h2>
+           <h2 style={{color:'white', textAlign:'center'}}> Register</h2>
                 <form onSubmit={registerSubmit}>
                     <input type="text" name="name" id="register-name"
                     placeholder="User Name" required value={user.name}
@@ -98,9 +98,9 @@ export default function Login({setIsLogin}) {
                     placeholder="Password" required value={user.password}
                     autoComplete="true" onChange={onChangeInput} />
 
-                    <button type="submit">Register</button>
+                    <button type="submit"><span id="RegisterBtn">Register</span></button>
                     <p>You have an account?
-                        <span onClick={() => setOnLogin(false)}> Login Now</span>
+                        <span id="RegisterNow" onClick={() => setOnLogin(false)}> Login Now</span>
                     </p>
                     <h3>{err}</h3>
                 </form>

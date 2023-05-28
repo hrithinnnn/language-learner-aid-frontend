@@ -236,9 +236,10 @@ a{
   margin: auto;
   border: 10px solid #ccc;
   padding: 30px;
-  --background: linear-gradient(to left, #2b6cf7 0%, #8053ea 100%);
-  background: #f7ba2b;
+  --background: black;
+  /* background: #f7ba2b; */
   background: var(--background);
+  border-radius: 20px;
 }
 
 .create-note h2{
@@ -260,6 +261,23 @@ a{
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-right:10px;
+}
+#date{
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  display: inline-block;
+  /* width: 150px; */
+  /* text-align: right; */
+  /* margin-right:10px; */
+}
+
+#SaveBtn{
+  transform: translateX(300%);
 }
 .create-note textarea{
   width: 100%;
@@ -271,8 +289,15 @@ a{
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 2px;
-  color: rgb(86, 134, 237);
+  color: black;
   background-color: white;
+}
+#RegisterNow:hover{
+ color:grey;
+}
+
+#RegisterBtn{
+  transform: translateX(150%);
 }
 @media (max-width: 500px){
   .create-note{
@@ -299,7 +324,7 @@ button span{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgb(51, 29, 164);
+  background: black;
 }
 .login-page h2,
 .login-page h3{
@@ -315,7 +340,7 @@ button span{
   color: white;
 }
 .login-page span:hover{
-  color: orange;
+  color: black;
   cursor: pointer;
 }
 

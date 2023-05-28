@@ -65,7 +65,7 @@ export default function Login({setIsLogin}) {
           <span className="slider"></span>
           </label>
            <div className="login create-note">
-                <h2><center>Login</center></h2>
+                <h2 style={{fontWeight:"bold", color:'white'}}><center>Login</center></h2>
                 <form onSubmit={loginSubmit}>
                     <input type="email" name="email" id="login-email"
                     placeholder="Email" required value={user.email}
@@ -76,8 +76,8 @@ export default function Login({setIsLogin}) {
                     autoComplete="true"
                     onChange={onChangeInput} />
 
-                    <button className="LoginBtn" type="submit"><center><span>Translate away</span></center></button>
-                    <p><center>You don't have an account?
+                    <button className="LoginBtn" type="submit"><span>Translate Away</span></button>
+                    <p><center>don't have an account?
                         <span onClick={() => setOnLogin(true)}> Register Now</span>
                     </center></p>
                     <h3>{err}</h3>

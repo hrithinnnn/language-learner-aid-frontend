@@ -19,11 +19,13 @@ h1 {
 }
 
 .switch {
-  position: relative;
+  position: fixed;
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin-top: 20px;
   margin-right: 1rem;
+  right:0;
 }
 
 .switch input {
@@ -53,6 +55,11 @@ h1 {
   left: 4px;
   bottom: 4px;
   background-color: white;
+  background-image: url(../../../public/darkmodeswitch.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 50%;
@@ -70,6 +77,8 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+  background-color: #000;
+  background-image: url(../../../public/lightmodeswitch.png);
 }
 
 .row {
@@ -114,7 +123,7 @@ button {
   font-size: 1.2rem;
   cursor: pointer;
   transition: color 0.2s ease;
-  box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  /* box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
   display: flex;
   align-items: center;
   text-align: center;
@@ -141,25 +150,25 @@ button:active {
   font-weight: 900;
   align-items: center;
   background-color: white;
-  box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  /* box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
 }
 
 
 .fa-volume-up:before {
   content: "\f028";
-  box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  /* box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
   background-color: white;
 }
 
 .fa-copy:before {
   content: "\f0c5";
-  box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  /* box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
   background-color: white;
 }
 
 .fa-exchange-alt:before {
   content: "\f362";
-  box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  /* box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
   background-color: white;
 }
 
@@ -180,6 +189,14 @@ button:active {
     margin-right: 0;
     margin-bottom: 1rem;
   }
+}
+
+.Translator{
+  border: solid 10px white ;
+  padding: 10px;
+  background-color: #000;
+  transform: scale(0.8);
+  border-radius:20px;
 }
 
 

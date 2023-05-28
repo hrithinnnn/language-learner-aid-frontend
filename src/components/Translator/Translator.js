@@ -227,7 +227,7 @@ export default function Translator() {
 
   // return (
   return (
-    <div className="app">
+    <div className="Translator">
       <header>
         <h1>Translation App</h1>
         {/* <label className="switch">

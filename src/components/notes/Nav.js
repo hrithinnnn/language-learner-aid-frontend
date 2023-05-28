@@ -22,9 +22,11 @@ export default function Nav({setIsLogin}) {
                 <h1><Link to="/">Transl8</Link></h1>
             </div>
               <ul>
-                <li><Link to="/">Home</Link></li>
+                <li ><Link to="/">Notes</Link></li>
+                <li><Link to="/translator">Translator</Link></li>
                 <li onClick={logoutSubmit}><Link to="/">Logout</Link></li>
             </ul>
+
             <label className="switch">
             <input type="checkbox" onChange={handleCheckboxChange} />
         <span className="slider"></span>

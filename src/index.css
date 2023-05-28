@@ -96,10 +96,10 @@ a{
   -webkit-transition: width .2s ease;
 } */
 
-.notes-page header ul li a:hover{
-  /* font-size: 30px; */
+/* .notes-page header ul li a:hover{
+  font-size: 30px;
  
-}
+} */
 .notes-page header ul li a:hover:after{
   transform: scaleX(1);
   

@@ -9,7 +9,7 @@ export default function Home() {
     const [token, setToken] = useState('')
 
     const getNotes = async (token) =>{
-        const res = await axios.get(API_URL+'api/notes', {
+        const res = await axios.get(API_URL+'/api/notes', {
             headers:{Authorization: token}
         })
         setNotes(res.data)
@@ -26,7 +26,7 @@ export default function Home() {
     const deleteNote = async (id) =>{
         try {
             if(token){
-                await axios.delete(API_URL+`api/notes/${id}`, {
+                await axios.delete(API_URL+`/api/notes/${id}`, {
                     headers: {Authorization: token}
                 })
                 getNotes(token)

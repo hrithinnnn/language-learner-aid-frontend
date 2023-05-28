@@ -9,7 +9,7 @@ export default function Home() {
     const [token, setToken] = useState('')
 
     const getNotes = async (token) =>{
-        const res = await axios.get('api/notes', {
+        const res = await axios.get(API_URL+'api/notes', {
             headers:{Authorization: token}
         })
         setNotes(res.data)
@@ -39,7 +39,7 @@ export default function Home() {
     return (
         <div className="note-wrapper">
             {
-                notes?.map(note =>(
+                notes.map(note =>(
                     <div className="card" key={note._id}>
                         <h4 title={note.title}>{note.title}</h4>
                         <div className="text-wrapper">

@@ -229,7 +229,7 @@ export default function Translator() {
   return (
     <div className="Translator">
       <header>
-        <h1>Translation App</h1>
+        <h1>Translator</h1>
         {/* <label className="switch">
 
           <span className="slider"></span>
@@ -263,6 +263,12 @@ export default function Translator() {
               </button>
             </div>
           </div>
+
+        <div className="exchange">
+          <button className="fas fa-exchange-alt" style={{ color: '#ffffff' }} onClick={handleExchange}></button>
+        </div>
+
+
           <div className="column">
             <select
               name="translateTo"
@@ -283,9 +289,6 @@ export default function Translator() {
               </button>
             </div>
           </div>
-        </div>
-        <div className="exchange">
-          <button className="fas fa-exchange-alt" style={{ color: '#ffffff' }} onClick={handleExchange}></button>
         </div>
         <center><button id='translate-btn' onClick={handleTranslate}>
           {isLoading ? "Translating..." : "Translate"}
